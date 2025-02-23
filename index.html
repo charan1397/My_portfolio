@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charan Sai Khanchana - DevOps Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Press+Start+2P&family=Permanent+Marker&family=Fira+Code&family=Orbitron&family=VT323&family=Share+Tech+Mono&family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0891b2',
+                        secondary: '#1e293b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .font-change-animation {
+            animation: fontChange 5s infinite;
+        }
+
+        @keyframes fontChange {
+            0% {
+                font-family: 'Roboto Mono', monospace;
+            }
+            12.5% {
+                font-family: 'Press Start 2P', cursive;
+                transform: scale(0.95);
+            }
+            25% {
+                font-family: 'Permanent Marker', cursive;
+                transform: scale(1.05);
+            }
+            37.5% {
+                font-family: 'Fira Code', monospace;
+            }
+            50% {
+                font-family: 'Orbitron', sans-serif;
+                transform: scale(0.98);
+            }
+            62.5% {
+                font-family: 'VT323', monospace;
+                transform: scale(1.02);
+            }
+            75% {
+                font-family: 'Share Tech Mono', monospace;
+            }
+            87.5% {
+                font-family: 'Major Mono Display', monospace;
+                transform: scale(0.97);
+            }
+            100% {
+                font-family: 'Roboto Mono', monospace;
+                transform: scale(1);
+            }
+        }
+
+        .animated-name {
+            background: linear-gradient(
+                270deg,
+                #0891b2,
+                #0ea5e9,
+                #3b82f6,
+                #6366f1,
+                #8b5cf6,
+                #0891b2
+            );
+            background-size: 300% 300%;
+            animation: 
+                gradient 6s ease infinite,
+                fontChange 5s infinite;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .animated-name:hover {
+            transform: scale(1.05);
+            text-shadow: 0 0 20px rgba(8, 145, 178, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">
+    <!-- Sidebar Navigation -->
+    <aside class="fixed top-0 left-0 h-screen w-64 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700">
+        <div class="flex flex-col h-full">
+            <div class="p-6">
+                <h1 class="text-2xl font-bold text-primary">CSK</h1>
+            </div>
+            
+            <nav class="flex-1 p-4">
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#about" class="flex items-center gap-3 px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">
+                            <i class="fas fa-user"></i>
+                            <span>About</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#skills" class="flex items-center gap-3 px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>Skills</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#experience" class="flex items-center gap-3 px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Experience</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#education" class="flex items-center gap-3 px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Education</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="p-6 border-t border-gray-200 dark:border-gray-700">
+                <button onclick="toggleTheme()" class="w-full flex items-center justify-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-all text-gray-800 dark:text-white">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block"></i>
+                    <span>Toggle Theme</span>
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="ml-64 p-8">
+        <!-- Hero Section -->
+        <section id="about" class="min-h-screen flex items-center">
+            <div class="max-w-4xl">
+                <h1 class="text-6xl font-bold text-gray-800 dark:text-white mb-6">
+                    Hi, I'm <span class="animated-name">Charan Sai</span>
+                </h1>
+                <p class="text-2xl text-gray-600 dark:text-gray-400 mb-8">
+                    Senior DevOps Engineer specializing in cloud infrastructure and automation
+                </p>
+                <p class="text-xl text-gray-600 dark:text-gray-400 mb-8 flex items-center gap-2">
+                    <i class="fas fa-envelope text-primary"></i>
+                    <a href="mailto:charans1397@gmail.com" class="hover:text-primary transition-colors">charans1397@gmail.com</a>
+                </p>
+                <div class="flex gap-4 mb-8">
+                    <a href="#" class="bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-white px-6 py-3 rounded-lg flex items-center gap-2">
+                        <i class="fas fa-download"></i>
+                        Download CV
+                    </a>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8">Technical Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Cloud Platforms -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                    <i class="fab fa-aws text-4xl text-primary mb-4"></i>
+                    <h3 class="font-semibold mb-2 text-gray-800 dark:text-white">AWS</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">EC2, EKS, ECS, Lambda</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                    <i class="fab fa-microsoft text-4xl text-primary mb-4"></i>
+                    <h3 class="font-semibold mb-2 text-gray-800 dark:text-white">Azure</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">AKS, Functions, DevOps</p>
+                </div>
+
+                <!-- Containerization -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                    <i class="fab fa-docker text-4xl text-primary mb-4"></i>
+                    <h3 class="font-semibold mb-2 text-gray-800 dark:text-white">Docker</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Containerization & Compose</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                    <i class="fas fa-dharmachakra text-4xl text-primary mb-4"></i>
+                    <h3 class="font-semibold mb-2 text-gray-800 dark:text-white">Kubernetes</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Orchestration & Helm</p>
+                </div>
+
+                <!-- CI/CD -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                    <i class="fab fa-jenkins text-4xl text-primary mb-4"></i>
+                    <h3 class="font-semibold mb-2 text-gray-800 dark:text-white">Jenkins</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Pipeline Automation</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                    <i class="fab fa-gitlab text-4xl text-primary mb-4"></i>
+                    <h3 class="font-semibold mb-2 text-gray-800 dark:text-white">GitLab CI</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">CI/CD Pipelines</p>
+                </div>
+
+                <!-- IaC -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                    <i class="fas fa-code text-4xl text-primary mb-4"></i>
+                    <h3 class="font-semibold mb-2 text-gray-800 dark:text-white">Terraform</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Infrastructure as Code</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                    <i class="fas fa-cogs text-4xl text-primary mb-4"></i>
+                    <h3 class="font-semibold mb-2 text-gray-800 dark:text-white">Ansible</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Configuration Management</p>
+                </div>
+
+                <!-- Monitoring -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                    <i class="fas fa-chart-line text-4xl text-primary mb-4"></i>
+                    <h3 class="font-semibold mb-2 text-gray-800 dark:text-white">Prometheus</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Monitoring & Alerting</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                    <i class="fas fa-chart-bar text-4xl text-primary mb-4"></i>
+                    <h3 class="font-semibold mb-2 text-gray-800 dark:text-white">Grafana</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Visualization & Dashboards</p>
+                </div>
+
+                <!-- Logging -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                    <i class="fas fa-search text-4xl text-primary mb-4"></i>
+                    <h3 class="font-semibold mb-2 text-gray-800 dark:text-white">ELK Stack</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Log Management</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                    <i class="fas fa-terminal text-4xl text-primary mb-4"></i>
+                    <h3 class="font-semibold mb-2 text-gray-800 dark:text-white">Shell Scripting</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Bash & Python</p>
+                </div>
+
+                <!-- Version Control -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                    <i class="fab fa-git-alt text-4xl text-primary mb-4"></i>
+                    <h3 class="font-semibold mb-2 text-gray-800 dark:text-white">Git</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Version Control</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                    <i class="fas fa-network-wired text-4xl text-primary mb-4"></i>
+                    <h3 class="font-semibold mb-2 text-gray-800 dark:text-white">Networking</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">VPC, DNS, Load Balancing</p>
+                </div>
+
+                <!-- Security -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                    <i class="fas fa-shield-alt text-4xl text-primary mb-4"></i>
+                    <h3 class="font-semibold mb-2 text-gray-800 dark:text-white">Security</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">IAM, SSL/TLS, Vault</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                    <i class="fas fa-cloud text-4xl text-primary mb-4"></i>
+                    <h3 class="font-semibold mb-2 text-gray-800 dark:text-white">Cloud Native</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Service Mesh, ArgoCD</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20">
+            <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8">Experience</h2>
+            <div class="space-y-8">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-1 text-gray-800 dark:text-white">Senior DevOps Engineer</h3>
+                            <p class="text-primary">Gulfstream Aerospace , Savannah, GA, USA  </p>
+                        </div>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">June 2024 - Present</span>
+                    </div>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle mt-1 text-primary"></i>
+                            <span>Optimized CI/CD deployments by diagnosing and resolving Kubernetes (AKS) microservice failures, implementing automated rollback mechanisms and improving pipeline efficiency, which reduced deployment issues by 40% using Azure DevOps, Terraform, and GitHub Actions.</span>
+                        </li>                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle mt-1 text-primary"></i>
+                            <span>Implemented AI-driven predictive monitoring with Azure Machine Learning and Databricks, cutting troubleshooting time by 60% through real-time anomaly detection and automated root cause analysis.</span>
+                        </li>                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle mt-1 text-primary"></i>
+                            <span>Enhanced database connectivity and security by automating PostgreSQL firewall configurations and access controls using Terraform and Azure Security Center, ensuring seamless cloud resource provisioning and improving overall system efficiency by 50%.</span>
+                        </li>                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle mt-1 text-primary"></i>
+                            <span>Increased system uptime to 99.9% by deploying Istio Service Mesh for microservices traffic management, optimizing load balancing with Azure Load Balancer and API Gateway, and implementing robust failover strategies to maintain high availability for mission-critical aircraft design applications.
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-1 text-gray-800 dark:text-white">Cloud Engineer</h3>
+                            <p class="text-primary">Standard Chartered Bank , Hyderabad,India</p>
+                        </div>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Aug 2019 - July 2022</span>
+                    </div>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle mt-1 text-primary"></i>
+                            <span>Streamlined and automated CI/CD processes by integrating Jenkins, GitLab CI, and CircleCI, reducing manual intervention and deployment-related downtime by 35%, ensuring seamless and error-free financial software rollouts across multiple environments.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle mt-1 text-primary"></i>
+                            <span>Designed and implemented cloud infrastructure automation using Terraform and CloudFormation, eliminating 65% of manual configuration tasks and ensuring consistent, scalable, and compliant deployments across AWS and Azure cloud environments.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle mt-1 text-primary"></i>
+                            <span>Strengthened financial application security by implementing API Gateway, SSL/TLS encryption, and VPNs, mitigating 95% of unauthorized access attempts and enhancing compliance with banking regulations.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle mt-1 text-primary"></i>
+                            <span>Optimized system monitoring and database performance using Nagios, Datadog, and Grafana, improving transaction processing speeds by 45% and reducing system latency in high-volume banking operations.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-1 text-gray-800 dark:text-white">DevOps Engineer</h3>
+                            <p class="text-primary">CVS Health , Hyderabad,India</p>
+                        </div>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2023 - Present</span>
+                    </div>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle mt-1 text-primary"></i>
+                            <span>Assisted in setting up and maintaining CI/CD pipelines using Jenkins, GitLab CI/CD, and Azure DevOps, reducing manual deployment effort by 30% and ensuring smoother software releases.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle mt-1 text-primary"></i>
+                            <span>Helped automate cloud infrastructure provisioning with Terraform and Ansible, supporting the deployment of secure cloud resources and reducing configuration errors by 40% across AWS and Azure environments.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle mt-1 text-primary"></i>
+                            <span>Monitored application performance and system health using Prometheus, Grafana, and Datadog, contributing to faster troubleshooting and reducing incident resolution time by 35% through proactive monitoring and log analysis.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle mt-1 text-primary"></i>
+                            <span>Supported security improvements by configuring API Gateway, SSL/TLS encryption, and access controls, helping mitigate 85% of unauthorized access attempts and improving system security.</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Add more experience cards -->
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-20">
+            <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8">Education</h2>
+            <div class="space-y-8">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-1 text-gray-800 dark:text-white">Wichita State University</h3>
+                            <p class="text-primary">Master of Science in Computer Science</p>
+                        </div>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2022 - 2024</span>
+                    </div>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+
+                        <!-- Add more details -->
+                    </ul>
+                </div>
+                <!-- Add SRM University card -->
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+        }
+    </script>
+</body>
+</html>
